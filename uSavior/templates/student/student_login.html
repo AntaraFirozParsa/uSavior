@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Log in [Student]- uSavior</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/brands/logo.png">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css?h=97fdfa31c346c923d830c27d591ac4aa">
+    <link rel="stylesheet" href="/static/css/Raleway.css?h=0ec1a47909b38d61779c28ccc34e194d">
+</head>
+
+<body>
+    <!-- Start: Navbar Centered Links -->
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1"><a href="/home"><img src="/static/img/brands/logo2.png?h=e4625cd8501ed52833bc7e770fa2fa4b" width="185" height="79" style="width: 190px;height: 79px;"></a>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="student_login">Log in</a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="student_registration">Register</a>
+            </div>
+        </div>
+    </nav><!-- End: Navbar Centered Links -->  
+    <!-- Start: Login Form -->
+    <section class="py-4 py-md-5 my-5">
+        <form action="student_login" method="post">
+        <div class="container py-md-5">
+            <div class="row">
+                <div class="col-md-6 text-center"><img class="img-fluid w-100" src="/static/img/illustrations/login.svg?h=dd35c7dba58803954242d42488889a4c"></div>
+                <div class="col-md-5 col-xl-4 text-center text-md-start">
+                    <h2 class="display-6 fw-bold mb-5" style="font-size: 36px;"><span class="underline pb-1"><strong>Login</strong></span>&nbsp;as Student</h2>
+                    <ul method="post" data-bs-theme="light">
+                        <div class="mb-3"><input class="shadow form-control" type="email" name="email" placeholder="Email"></div>
+                        <div class="mb-3"><input class="shadow form-control" type="password" name="password" placeholder="Password"></div>
+                        <p class="text-muted"></p><a href="{{url_for('forgotten_password', type='student')}}">Forgot your password?</a>
+                        <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Login</button><a class="btn btn-primary shadow" role="button"  href="home" style="margin: 16px;">Back</a></div>
+                    </ul><a class="btn btn-primary shadow" role="button" href="instructor_login"> <u>Not Student</u>? Log in as Instructor</a>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+    </section><!-- End: Login Form -->
+    <!-- Start: Footer Multi Column -->
+    {% include 'home/footer.html' %}
+    <!-- End: Footer Multi Column -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/startup-modern.js?h=860a1ecddc64fd24c02f2fc109343dbd"></script>
+</body>
+
+</html>

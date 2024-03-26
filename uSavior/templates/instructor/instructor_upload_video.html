@@ -1,0 +1,309 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      flex-direction: column;
+    }
+    .formbold-mb-3 {
+      margin-bottom: 15px;
+      flex-direction: column;
+
+    }
+  
+    .formbold-main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      flex-direction: column;
+
+    }
+  
+    .formbold-form-wrapper {
+      margin: 0 auto;
+      max-width: 570px;
+      width: 100%;
+      background: white;
+      padding: 40px;
+      flex-direction: column;
+
+    }
+  
+    .formbold-img {
+      display: block;
+      margin: 0 auto 45px;
+      flex-direction: column;
+
+    }
+  
+    .formbold-input-wrapp > div {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+
+    }
+  
+    .formbold-input-flex {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 15px;
+      flex-direction: column;
+
+    }
+    .formbold-input-flex > div {
+      width: 100%;
+    }
+    .formbold-form-input {
+      width: 100%;
+      padding: 13px 22px;
+      border-radius: 5px;
+      border: 1px solid #dde3ec;
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 16px;
+      color: #536387;
+      outline: none;
+      resize: none;
+      flex-direction: column;
+
+    }
+    .formbold-form-input::placeholder,
+    select.formbold-form-input {
+      color: rgba(83, 99, 135, 0.5);
+    }
+  
+    .formbold-form-input:focus {
+      border-color: #6a64f1;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+    .formbold-form-label {
+      color: #07074D;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .formbold-form-file-flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .formbold-form-file-flex .formbold-form-label {
+      margin-bottom: 0;
+    }
+    .formbold-form-file {
+      font-size: 14px;
+      line-height: 24px;
+      color: #536387;
+    }
+
+    .formbold-btn {
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      padding: 14px 25px;
+      border: none;
+      font-weight: 500;
+      background-color: #6a64f1;
+      color: white;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+    .formbold-btn:hover {
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+    }
+  
+    .formbold-w-45 {
+      width: 45%;
+    }
+
+        .centered-image {
+
+          display: block;
+          margin: 0 auto;
+        }
+  .dashboard-photo{
+      padding: 20px;
+      position: center;
+      margin-bottom: 50px;
+    }
+.form_outline{
+    display: flex;
+    flex-direction: column;
+}
+  </style>
+
+<!DOCTYPE html>
+
+
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Upload video</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/brands/logo.png">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css?h=97fdfa31c346c923d830c27d591ac4aa">
+    <link rel="stylesheet" href="/static/css/Raleway.css?h=0ec1a47909b38d61779c28ccc34e194d">
+</head>
+
+<body>
+    <!-- Start: Navbar Centered Links -->
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navcol-1"><a href="/home"><img src="/static/img/brands/logo2.png?h=e4625cd8501ed52833bc7e770fa2fa4b" width="185" height="79" style="width: 190px;height: 79px;"></a>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="instructor_dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructor_edit_profile">Edit Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructor_my_courses">My Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="instructor_view_AllCourses">All Courses</a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="instructor_logout">Logout</a>
+            </div>
+        </div>
+    </nav><!-- End: Navbar Centered Links -->
+    <div class="form_outline">
+    <section class="py-4 py-md-5 my-5">
+        <div class="formbold-main-wrapper">
+            <div class="dashboard-photo">
+              <img src="https://www.gstatic.com/youtube/img/creator/no_content_illustration_upload_video_v3.svg" alt="people" style="width: 500px; height: 500px"> 
+              <form action="https://formbold.com/s/FORM_ID" method="POST">
+                  
+          
+          
+                <div class="formbold-input-flex">
+                    
+                  <div>
+                      <label for="email" class="formbold-form-label"> Email </label>
+                      <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="example@email.com"
+                      class="formbold-form-input"
+                      required
+                      />
+                  </div>
+                
+                <div class="formbold-mb-3">
+                  <label for="age" class="formbold-form-label"> Institution </label>
+                  <input
+                    type="text"
+                    name="age"
+                    id="age"
+                    class="formbold-form-input"
+                    placeholder="BRAC UNIVERSITY"
+                    required
+                  />
+                </div>
+        
+                <div class="formbold-mb-3">
+                    <label for="age" class="formbold-form-label"> Department</label>
+                    <input
+                      type="text"
+                      name="age"
+                      id="age"
+                      class="formbold-form-input"
+                      placeholder="CSE/CS/BBA/CIVIL/EEE"
+                      required
+                    />
+                  </div>
+        
+          
+                  <div class="formbold-mb-3">
+                    <label for="age" class="formbold-form-label"> Course Code </label>
+                    <input
+                      type="text"
+                      name="age"
+                      id="age"
+                      class="formbold-form-input"
+                      placeholder="CSE111-BRACU/ CSE101-NSU"
+                      required
+                    />
+                  </div>
+                  <div class="formbold-mb-3">
+                    <label for="age" class="formbold-form-label" > Course Title </label>
+                    <input
+                      type="text"
+                      name="age"
+                      id="age"
+                      class="formbold-form-input"
+                      placeholder="Data Structure/Algorithm etc."
+                    />
+                  </div>
+                  <div class="formbold-mb-3">
+                    <label for="message" class="formbold-form-label">
+                      Course Introduction
+                    </label>
+                    <textarea
+                      rows="6"
+                      name="message"
+                      id="message"
+                      class="formbold-form-input"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="formbold-mb-3">
+                    <label for="message" class="formbold-form-label">
+                      Your Course overview
+                    </label>
+                    <textarea
+                      rows="6"
+                      name="message"
+                      id="message"
+                      class="formbold-form-input"
+                      required
+                    ></textarea>
+                  </div>
+                <div class="formbold-mb-3">
+                  <label for="message" class="formbold-form-label">
+                    Why you think your video is helpful for the students? 
+                  </label>
+                  <textarea
+                    rows="6"
+                    name="message"
+                    id="message"
+                    class="formbold-form-input"
+                    required
+                  ></textarea>
+                </div>
+                <p> <b> Step 01: Upload your Videos in your Drive. <b> <br>
+                    <b> Step 02: Put the video link in Drive link form and wait for the response! <b> </p>
+                <div class="formbold-mb-3">
+                    <label for="age" class="formbold-form-label"> Drive link for videos</label>
+                    <input
+                      type="text"
+                      name="age"
+                      id="age"
+                      class="formbold-form-input"
+                      placeholder=" Video link!"
+                      required
+                    />
+                  </div>
+          
+                <button class="formbold-btn">Request to upload</button>
+              </form>      
+            </div>
+          </div>
+
+    </section>
+</div>
+
+
+
+
+
+
+    <!-- Start: Footer Multi Column -->
+    {% include 'home/footer.html' %}
+    <!-- End: Footer Multi Column -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/startup-modern.js?h=860a1ecddc64fd24c02f2fc109343dbd"></script>
+</body>

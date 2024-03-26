@@ -1,0 +1,109 @@
+<style>
+    .dashboard-photo{
+        padding: 200px;
+        position: center;
+      }
+      .forTable {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+      }
+</style>
+<!DOCTYPE html>
+
+
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>View all course</title>
+    <link rel="shortcut icon" type="image/png" href="/static/img/brands/logo.png">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css?h=97fdfa31c346c923d830c27d591ac4aa">
+    <link rel="stylesheet" href="/static/css/Raleway.css?h=0ec1a47909b38d61779c28ccc34e194d">
+</head>
+
+<body>
+    <!-- Start: Navbar Centered Links -->
+    <nav class="navbar navbar-light navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1"><a href="/home"><img src="/static/img/brands/logo2.png?h=e4625cd8501ed52833bc7e770fa2fa4b" width="185" height="79" style="width: 190px;height: 79px;"></a>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="instructor_dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructor_edit_profile">Edit Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructor_my_courses">My Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="instructor_view_AllCourses">All Courses</a></li>
+                </ul><a class="btn btn-primary shadow" role="button" href="instructor_logout">Logout</a>
+            </div>
+        </div>
+    </nav><!-- End: Navbar Centered Links -->
+
+    <div class="dashboard-photo">
+        <img src="/static/img/avatar/people.png" alt="Your Image" style="display: block; margin: 0 auto;">
+        <table class="table table-striped">
+            <div class="forTable">
+            <header class="pt-5">
+                <!-- Start: Hero Clean Reverse -->
+                <div class="container pt-4 pt-xl-5">
+                    <div class="row pt-5">
+                        <div class="col-md-8 text-center text-md-start mx-auto">
+                            <div class="text-center">
+                                
+                                <h1 class="display-4 fw-bold mb-5"> Explore all the amazing Courses!</h1>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-10 mx-auto">
+                            <div class="text-center position-relative"></div>
+                        </div>
+                    </div>
+                </div><!-- End: Hero Clean Reverse -->
+            </header>  
+            <thead>
+                
+                <tr>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSE 111: Programming Language-II (3 credits)
+                        </td>
+                    <td>This course would be an introduction to data structures, formal specification of syntax, elements of language theory and mathematical preliminaries. Other topics that would be covered are formal languages, structured programming concepts, survey of features of existing high level languages. Students would design and write application using an appropriate language.
+                        The course includes a compulsory 3 hour laboratory work each week.</td>
+                    <td><a href="instructor_upload_video"> <button class="btn btn-primary">Request to add </button> </a></td>
+                </tr>
+                <tr>
+                    <td>Course 3</td>
+                    <td>Description of Course 3</td>
+                    <td><button class="btn btn-primary">Request to add</button></td>
+                </tr>
+
+                <tr>
+                    <td>Course 4</td>
+                    <td>Description of Course 4</td>
+                    <td><button class="btn btn-primary">Request to add</button></td>
+                </tr>
+                <tr>
+                    <td>Course 5</td>
+                    <td>Description of Course 5</td>
+                    <td><button class="btn btn-primary">Request to add</button></td>
+                </tr>
+                <!-- Add more rows for additional courses -->
+            </tbody>
+        </div>
+        </table>
+    </div><!-- End: Course Table -->
+
+
+
+    <!-- Start: Footer Multi Column -->
+    {% include 'home/footer.html' %}
+    <!-- End: Footer Multi Column -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/startup-modern.js?h=860a1ecddc64fd24c02f2fc109343dbd"></script>
+</body>
+
+</html>
